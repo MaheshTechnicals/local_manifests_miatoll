@@ -20,7 +20,7 @@
     <!-- Device - Common -->
 
     <!-- Kernel -->
-    <project path="kernel/xiaomi/sm6250" name="kernel_xiaomi_sm6250" remote="clarencekopitiam" revision="15" />
+    <project path="kernel/xiaomi/sm6250" name="kernel_xiaomi_sm6250" remote="clarencekopitiam" revision="15-kinesis" />
 
     <!-- Vendor -->
     <project path="vendor/lineage-priv/keys" name="vendor_lineage-priv" remote="MaheshTechnicals" revision="alpha" />
