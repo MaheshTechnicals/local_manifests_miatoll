@@ -11,6 +11,7 @@
     <!-- Removals -->
     <remove-project name="crdroidandroid/android_hardware_xiaomi" />
     <remove-project name="frameworks_native" />
+    
     <!-- Repos -->
     <!-- Device -->
     <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-ev" remote="MaheshTechnicals" revision="alpha" />
@@ -32,6 +33,6 @@
     <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="LineageOS" revision="lineage-21" />
 
     <!-- Other Repos -->
-    <project path="frameworks/native" name="" remote="" />
-
+    <!-- Adapted frameworks/native -->
+    <project path="frameworks/native" name="frameworks_native-alpha" remote="MaheshTechnicals" revision="alpha-14" />
 </manifest>
