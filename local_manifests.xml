@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<!-- Generated using sounddrill31/actions_generate_local_manifests -->
-
     <!-- Remotes -->
     <remote name="clarencelol" fetch="https://github.com/clarencelol" clone-depth="1" />
     <remote name="clarencekopitiam" fetch="https://github.com/clarencekopitiam" clone-depth="1" />
@@ -12,11 +10,10 @@
     <remove-project name="crdroidandroid/android_hardware_xiaomi" />
     <remove-project name="frameworks_native" />
     
-    <!-- Repos -->
+    <!-- Repositories -->
+    
     <!-- Device -->
     <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-ev" remote="MaheshTechnicals" revision="alpha" />
-
-    <!-- Device - Common -->
 
     <!-- Kernel -->
     <project path="kernel/xiaomi/sm6250" name="kernel_xiaomi_sm6250" remote="clarencekopitiam" revision="15-kinesis" />
@@ -26,13 +23,10 @@
     <project path="vendor/xiaomi/miuicamera" name="vendor_xiaomi_miuicamera" remote="clarencelol" revision="main" />
     <project path="vendor/xiaomi/miatoll" name="vendor_xiaomi_miatoll" remote="clarencekopitiam" revision="lineage-21.0" />
 
-    <!-- Vendor - Common -->
-
     <!-- Hardware -->
     <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="LineageOS" revision="lineage-21" />
     <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="LineageOS" revision="lineage-21" />
 
-    <!-- Other Repos -->
-    <!-- Adapted frameworks/native -->
+    <!-- Frameworks -->
     <project path="frameworks/native" name="frameworks_native-alpha" remote="MaheshTechnicals" revision="alpha-14" />
 </manifest>
