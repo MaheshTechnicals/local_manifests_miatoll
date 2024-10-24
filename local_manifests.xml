@@ -7,7 +7,7 @@
     <remote name="MaheshTechnicals" fetch="https://github.com/MaheshTechnicals" clone-depth="1" />
 
     <!-- Removals -->
-    <remove-project name="crdroidandroid/android_hardware_xiaomi" />
+    <!-- <remove-project name="crdroidandroid/android_hardware_xiaomi" /> -->
     <remove-project name="frameworks_native" />
     
     <!-- Repositories -->
