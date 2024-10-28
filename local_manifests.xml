@@ -7,13 +7,13 @@
     <remote name="MaheshTechnicals" fetch="https://github.com/MaheshTechnicals" clone-depth="1" />
 
     <!-- Removals -->
-    <!-- <remove-project name="crdroidandroid/android_hardware_xiaomi" /> -->
-    <remove-project name="android_frameworks_native" />
+    <remove-project name="AfterlifeOS/hardware_xiaomi" />
+    <remove-project name="AfterlifeOS/frameworks_native" />
     
     <!-- Repositories -->
     
     <!-- Device -->
-    <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-ev" remote="MaheshTechnicals" revision="orion" />
+    <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-ev" remote="MaheshTechnicals" revision="afterlife" />
 
     <!-- Kernel -->
     <project path="kernel/xiaomi/sm6250" name="kernel_xiaomi_sm6250" remote="clarencekopitiam" revision="15-kinesis" />
@@ -28,5 +28,5 @@
     <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="LineageOS" revision="lineage-21" />
 
     <!-- Frameworks -->
-    <project path="frameworks/native" name="android_frameworks_native-orion" remote="MaheshTechnicals" revision="14.0" />
+    <project path="frameworks/native" name="frameworks_native-after" remote="MaheshTechnicals" revision="14" />
 </manifest>
