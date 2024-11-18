@@ -13,7 +13,7 @@
     <!-- Repositories -->
     
     <!-- Device -->
-    <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-ev" remote="MaheshTechnicals" revision="alpha" />
+    <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-ev" remote="MaheshTechnicals" revision="alph-vanilla" />
 
     <!-- Kernel -->
     <project path="kernel/xiaomi/sm6250" name="kernel_xiaomi_sm6250" remote="clarencekopitiam" revision="15-kinesis" />
