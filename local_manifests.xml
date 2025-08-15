@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Remotes -->
+    <remote name="MaheshTechnicals" fetch="https://github.com/MaheshTechnicals" clone-depth="1" />
+    <remote name="LineageOS" fetch="https://github.com/LineageOS" clone-depth="1" />
+
+    <!-- Optional Removals -->
+    <!-- Remove hardware/xiaomi from default sources if needed -->
+    <!-- <remove-project name="android_hardware_xiaomi" /> -->
+    <!-- Remove frameworks/native if replacing -->
+    <!-- <remove-project name="frameworks_native" /> -->
+
+    <!-- Device -->
+    <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-16" remote="MaheshTechnicals" revision="lunaris" />
+
+    <!-- Kernel -->
+    <project path="kernel/xiaomi/sm6250" name="kernel_xiaomi_sm6250-16" remote="MaheshTechnicals" revision="clover-16" />
+
+    <!-- Vendor -->
+    <project path="vendor/xiaomi/miatoll" name="vendor_xiaomi_miatoll-16" remote="MaheshTechnicals" revision="clover-16" />
+
+    <!-- Hardware -->
+    <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="LineageOS" revision="lineage-22.2" />
+    <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="LineageOS" revision="lineage-22.2" />
+
+    <!-- Signing Keys -->
+    <project path="vendor/lineage-priv/keys" name="vendor_lineage-priv" remote="MaheshTechnicals" revision="alpha" />
+</manifest>
