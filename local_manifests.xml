@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <!-- Remotes -->
+    <!-- Custom Remote -->
     <remote name="MaheshTechnicals" fetch="https://github.com/MaheshTechnicals" clone-depth="1" />
-    <remote name="LineageOS" fetch="https://github.com/LineageOS" clone-depth="1" />
-
-    <!-- Optional Removals -->
-    <!-- Remove hardware/xiaomi from default sources if needed -->
-    <!-- <remove-project name="android_hardware_xiaomi" /> -->
-    <!-- Remove frameworks/native if replacing -->
-    <!-- <remove-project name="frameworks_native" /> -->
 
     <!-- Device -->
     <project path="device/xiaomi/miatoll" name="device_xiaomi_miatoll-16" remote="MaheshTechnicals" revision="lunaris" />
