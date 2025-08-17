@@ -15,20 +15,29 @@ echo "=================="
 echo " Repo init success ✅"
 echo "=================="
 
-# Step 3: Clone device/kernel/vendor/hardware repos
+# Step 3: Sync sources first
+/opt/crave/resync.sh
+echo "============="
+echo " Repo sync success ✅"
+echo "============="
+
+# Step 4: Clone device/kernel/vendor/hardware repos
 echo "=========================="
 echo " Cloning device tree... "
 echo "=========================="
+rm -rf device/xiaomi/miatoll
 git clone --depth=1 -b lunaris https://github.com/MaheshTechnicals/device_xiaomi_miatoll-16 device/xiaomi/miatoll
 
 echo "=========================="
 echo " Cloning kernel tree... "
 echo "=========================="
+rm -rf kernel/xiaomi/sm6250
 git clone --depth=1 -b clover-16 https://github.com/MaheshTechnicals/kernel_xiaomi_sm6250-16 kernel/xiaomi/sm6250
 
 echo "=========================="
 echo " Cloning vendor tree... "
 echo "=========================="
+rm -rf vendor/xiaomi/miatoll
 git clone --depth=1 -b clover-16 https://github.com/MaheshTechnicals/vendor_xiaomi_miatoll-16 vendor/xiaomi/miatoll
 
 echo "=========================="
@@ -46,17 +55,12 @@ git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_hardwar
 echo "=========================="
 echo " Cloning lineage priv keys... "
 echo "=========================="
+rm -rf vendor/lineage-priv/keys
 git clone --depth=1 -b alpha https://github.com/MaheshTechnicals/vendor_lineage-priv vendor/lineage-priv/keys
 
 echo "======================================="
 echo " ✅ All repositories cloned successfully"
 echo "======================================="
-
-# Step 4: Sync remaining sources
-/opt/crave/resync.sh
-echo "============="
-echo " Repo sync success ✅"
-echo "============="
 
 # Step 5: Export build info
 export BUILD_USERNAME=mahesh
