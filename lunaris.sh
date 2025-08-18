@@ -47,10 +47,10 @@ rm -rf hardware/sony/timekeep
 git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_hardware_sony_timekeep hardware/sony/timekeep
 
 echo "=========================="
-echo " Cloning Xiaomi hardware... "
+echo " Cloning Xiaomi hardware (patched)... "
 echo "=========================="
 rm -rf hardware/xiaomi
-git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi
+git clone --depth=1 -b lineage-22.2 https://github.com/MaheshTechnicals/android_hardware_xiaomi-16.git hardware/xiaomi
 
 echo "=========================="
 echo " Cloning lineage priv keys... "
