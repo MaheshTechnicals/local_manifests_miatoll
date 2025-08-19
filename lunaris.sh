@@ -38,7 +38,7 @@ echo "=========================="
 echo " Cloning vendor tree... "
 echo "=========================="
 rm -rf vendor/xiaomi/miatoll
-git clone --depth=1 -b clover-16 https://github.com/MaheshTechnicals/vendor_xiaomi_miatoll-16 vendor/xiaomi/miatoll
+git clone --depth=1 -b lunaris https://github.com/MaheshTechnicals/vendor_xiaomi_miatoll-16 vendor/xiaomi/miatoll
 
 echo "=========================="
 echo " Cloning Sony timekeep... "
@@ -92,4 +92,3 @@ m lunaris
 echo "====================="
 echo " Build started 🚀"
 echo "====================="
-
