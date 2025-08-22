@@ -62,6 +62,12 @@ rm -rf vendor/xiaomi/sm6250-common
 git clone --depth=1 -b lineage-22.2 https://github.com/MaheshTechnicals/proprietary_vendor_xiaomi_sm6250-common-15.git vendor/xiaomi/sm6250-common
 
 echo "=========================="
+echo " Cloning LineageOS private keys... "
+echo "=========================="
+rm -rf vendor/lineage-priv/keys
+git clone --depth=1 -b alpha https://github.com/MaheshTechnicals/vendor_lineage-priv vendor/lineage-priv/keys
+
+echo "=========================="
 echo " Cloning Sony timekeep... "
 echo "=========================="
 rm -rf hardware/sony/timekeep
@@ -111,9 +117,9 @@ echo " Installclean done ✅"
 echo "====================="
 
 # ===============================
-# Step 9: Start build
+# Step 9: Start GApps build
 # ===============================
 axion miatoll gms pico
 echo "====================="
-echo " Build started 🚀"
+echo " GApps build started 🚀"
 echo "====================="
