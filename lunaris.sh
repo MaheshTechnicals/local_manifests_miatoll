@@ -103,7 +103,7 @@ echo "====================="
 # ===============================
 # Step 7: Lunch target
 # ===============================
-lunch axion_miatoll-userdebug
+lunch lineage_miatoll-userdebug
 echo "====================="
 echo " Lunch target set ✅"
 echo "====================="
@@ -119,7 +119,13 @@ echo "====================="
 # ===============================
 # Step 9: Start GApps build
 # ===============================
+# Preferred AxionOS GApps build
 axion miatoll gms pico
+
+# Alternative (if above fails)
+brunch miatoll
+# mka bacon
+
 echo "====================="
 echo " GApps build started 🚀"
 echo "====================="
