@@ -114,7 +114,7 @@ echo "====================="
 echo "==========================="
 echo " Setting up lunch target..."
 echo "==========================="
-lunch axion_miatoll-gms-userdebug
+axion miatoll userdebug gms
 
 # ===============================
 # Step 9: Start AxionOS Build
@@ -122,4 +122,4 @@ lunch axion_miatoll-gms-userdebug
 echo "====================="
 echo " GApps build started 🚀"
 echo "====================="
-m axion
+m bacon
