@@ -122,10 +122,6 @@ echo "====================="
 # Preferred AxionOS GApps build
 axion miatoll gms pico
 
-# Alternative (if above fails)
-brunch miatoll
-# mka bacon
-
 echo "====================="
 echo " GApps build started 🚀"
 echo "====================="
