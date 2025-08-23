@@ -109,10 +109,17 @@ echo " Installclean done ✅"
 echo "====================="
 
 # ===============================
-# Step 8: Start AxionOS Build with GApps
+# Step 8: Lunch target
 # ===============================
-axion miatoll gms pico
+echo "==========================="
+echo " Setting up lunch target..."
+echo "==========================="
+lunch axion_miatoll-gms-userdebug
 
+# ===============================
+# Step 9: Start AxionOS Build
+# ===============================
 echo "====================="
 echo " GApps build started 🚀"
 echo "====================="
+m axion
