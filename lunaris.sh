@@ -101,14 +101,6 @@ echo " Envsetup success ✅"
 echo "====================="
 
 # ===============================
-# Step 7: Lunch target
-# ===============================
-lunch lineage_miatoll-userdebug
-echo "====================="
-echo " Lunch target set ✅"
-echo "====================="
-
-# ===============================
 # Step 8: Clean intermediates
 # ===============================
 make installclean
