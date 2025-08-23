@@ -20,7 +20,7 @@ echo " Repo init success ✅"
 echo "=================="
 
 # ===============================
-# Step 3: Sync sources using your custom script
+# Step 3: Sync sources
 # ===============================
 /opt/crave/resync.sh
 echo "============="
@@ -101,7 +101,7 @@ echo " Envsetup success ✅"
 echo "====================="
 
 # ===============================
-# Step 8: Clean intermediates
+# Step 7: Clean intermediates
 # ===============================
 make installclean
 echo "====================="
@@ -109,9 +109,8 @@ echo " Installclean done ✅"
 echo "====================="
 
 # ===============================
-# Step 9: Start GApps build
+# Step 8: Start AxionOS Build with GApps
 # ===============================
-# Preferred AxionOS GApps build
 axion miatoll gms pico
 
 echo "====================="
