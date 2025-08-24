@@ -9,6 +9,4 @@ This repository contains the setup script for building **Lunaris AOSP** on the X
 To set up your build environment and start the sync/build process, just run:
 
 ```bash
-crave run --no-patch -- "curl  | bash"
-
-https://raw.githubusercontent.com/MaheshTechnicals/local_manifests_miatoll/refs/heads/lunaris/axiom.sh
+crave run --no-patch -- bash -c "$(curl -sL https://raw.githubusercontent.com/MaheshTechnicals/local_manifests_miatoll/lunaris/axiom.sh)"
