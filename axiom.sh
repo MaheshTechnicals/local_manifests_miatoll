@@ -34,7 +34,7 @@ rm -rf device/xiaomi/miatoll
 git clone --depth=1 -b axion-15 https://github.com/MaheshTechnicals/android_device_xiaomi_miatoll-15.git device/xiaomi/miatoll
 
 rm -rf device/xiaomi/sm6250-common
-git clone --depth=1 -b lineage-22.2 https://github.com/MaheshTechnicals/android_device_xiaomi_sm6250-common-15.git device/xiaomi/sm6250-common
+git clone --depth=1 -b axion-15 https://github.com/MaheshTechnicals/android_device_xiaomi_sm6250-common-15.git device/xiaomi/sm6250-common
 
 rm -rf kernel/xiaomi/sm6250
 git clone --depth=1 -b lineage-22.2 https://github.com/MaheshTechnicals/android_kernel_xiaomi_sm6250-15.git kernel/xiaomi/sm6250
