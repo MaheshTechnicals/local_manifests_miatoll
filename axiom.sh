@@ -78,7 +78,7 @@ echo "Envsetup success ✅"
 #   gms       → Full GApps (default)
 #
 echo "Setting up lunch target..."
-axion miatoll gms
+axion miatoll va
 echo "Lunch target set to: miatoll (GMS build) ✅"
 
 # ===============================
