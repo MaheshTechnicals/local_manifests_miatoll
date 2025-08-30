@@ -1,3 +1,4 @@
+
 #!/bin/bash
 #
 # AxionOS Build Script for Miatoll (sm6250)
@@ -18,6 +19,15 @@ echo "Local manifests cleaned ✅"
 # ===============================
 repo init -u https://github.com/AxionAOSP/android.git -b lineage-22.2 --git-lfs
 echo "Repo init success ✅"
+
+# ===============================
+# Step 2.5: Fix possible repo corruption
+# ===============================
+echo "Cleaning possible corrupted prebuilts..."
+rm -rf .repo/projects/prebuilts/clang/host/linux-x86.git
+rm -rf .repo/project-objects/android_prebuilts_clang_host_linux-x86.git
+rm -rf prebuilts/clang/host/linux-x86
+echo "✅ Prebuilts cleanup done"
 
 # ===============================
 # Step 3: Sync sources
