@@ -25,7 +25,7 @@ echo "Repo init success ✅"
 echo "Cleaning possible corrupted prebuilts..."
 rm -rf .repo/projects/prebuilts/clang/host/linux-x86.git
 rm -rf .repo/project-objects/android_prebuilts_clang_host_linux-x86.git
-rm -rf prebuilts/clang/host/linux-x86
+rm -rf prebuilts/clang/host/linux-x86  # Force remove the directory and its contents
 echo "✅ Prebuilts cleanup done"
 
 # ===============================
