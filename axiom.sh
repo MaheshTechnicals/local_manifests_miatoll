@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #
 # AxionOS Build Script for Miatoll (sm6250)
@@ -36,9 +35,9 @@ echo "✅ Prebuilts cleanup done"
 echo "Repo sync success ✅"
 
 # ===============================
-# Step 4: Clone device/kernel/vendor/hardware/apps repos
+# Step 4: Clone device/kernel/vendor/hardware repos
 # ===============================
-echo "Cloning device/kernel/vendor/hardware/apps repos..."
+echo "Cloning device/kernel/vendor/hardware repos..."
 
 # Device trees
 rm -rf device/xiaomi/miatoll
@@ -69,10 +68,6 @@ git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_hardwar
 rm -rf hardware/xiaomi
 git clone --depth=1 -b 15 https://github.com/ihsanulrahman/hardware_xiaomi.git hardware/xiaomi
 
-# Browser (Jelly for Vanilla builds)
-rm -rf packages/apps/Jelly
-git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_packages_apps_Jelly.git packages/apps/Jelly
-
 echo "✅ All repositories cloned successfully"
 
 # ===============================
@@ -92,13 +87,13 @@ echo "Envsetup success ✅"
 # Step 7: Setup Lunch target
 # ===============================
 # Options:
-#   va        → Vanilla (No GApps, Jelly Browser included)
+#   va        → Vanilla (No GApps)
 #   gms pico  → Minimal GApps
 #   gms       → Full GApps (default)
 #
 echo "Setting up lunch target..."
 axion miatoll va
-echo "Lunch target set to: miatoll (Vanilla + Jelly Browser) ✅"
+echo "Lunch target set to: miatoll (Vanilla build) ✅"
 
 # ===============================
 # Step 8: Clean intermediates
@@ -112,3 +107,4 @@ echo "Installclean done ✅"
 echo "Starting AxionOS build 🚀"
 ax -br
 echo "Build completed ✅"
+
