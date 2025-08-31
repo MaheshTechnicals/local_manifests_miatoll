@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # AxionOS Build Script for Miatoll (sm6250)
-# Updated by Mahesh
+# Author: Mahesh
 #
 
 # Exit immediately on error
@@ -20,15 +20,6 @@ repo init -u https://github.com/AxionAOSP/android.git -b lineage-22.2 --git-lfs
 echo "Repo init success ✅"
 
 # ===============================
-# Step 2.5: Fix possible repo corruption
-# ===============================
-echo "Cleaning possible corrupted prebuilts..."
-rm -rf .repo/projects/prebuilts/clang/host/linux-x86.git
-rm -rf .repo/project-objects/android_prebuilts_clang_host_linux-x86.git
-rm -rf prebuilts/clang/host/linux-x86  # Force remove the directory and its contents
-echo "✅ Prebuilts cleanup done"
-
-# ===============================
 # Step 3: Sync sources
 # ===============================
 /opt/crave/resync.sh
@@ -39,34 +30,32 @@ echo "Repo sync success ✅"
 # ===============================
 echo "Cloning device/kernel/vendor/hardware repos..."
 
-# Device trees
 rm -rf device/xiaomi/miatoll
-git clone --depth=1 -b axion https://github.com/MaheshTechnicals/device_xiaomi_miatoll-15.git device/xiaomi/miatoll
+git clone --depth=1 -b axion-15 https://github.com/MaheshTechnicals/android_device_xiaomi_miatoll-15.git device/xiaomi/miatoll
 
 rm -rf device/xiaomi/sm6250-common
-git clone --depth=1 -b 15 https://github.com/Infinity-X-Devices/device_xiaomi_sm6250-common.git device/xiaomi/sm6250-common
+git clone --depth=1 -b axion-15 https://github.com/MaheshTechnicals/android_device_xiaomi_sm6250-common-15.git device/xiaomi/sm6250-common
 
-# Kernel
 rm -rf kernel/xiaomi/sm6250
-git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_kernel_xiaomi_sm6250.git kernel/xiaomi/sm6250
+git clone --depth=1 -b lineage-22.2 https://github.com/MaheshTechnicals/android_kernel_xiaomi_sm6250-15.git kernel/xiaomi/sm6250
 
-# Vendor trees
 rm -rf vendor/xiaomi/miatoll
-git clone --depth=1 -b 15 https://github.com/ihsanulrahman/vendor_xiaomi_miatoll.git vendor/xiaomi/miatoll
+git clone --depth=1 -b lineage-22.2 https://github.com/MaheshTechnicals/proprietary_vendor_xiaomi_miatoll-15.git vendor/xiaomi/miatoll
 
 rm -rf vendor/xiaomi/sm6250-common
-git clone --depth=1 -b 15 https://github.com/ihsanulrahman/vendor_xiaomi_sm6250-common.git vendor/xiaomi/sm6250-common
+git clone --depth=1 -b lineage-22.2 https://github.com/MaheshTechnicals/proprietary_vendor_xiaomi_sm6250-common-15.git vendor/xiaomi/sm6250-common
 
-# MIUI Camera
 rm -rf vendor/xiaomi/miuicamera
-git clone --depth=1 -b 15 https://github.com/ihsanulrahman/vendor_xiaomi_miuicamera.git vendor/xiaomi/miuicamera
+git clone --depth=1 -b 15 https://github.com/ihsanulrahman/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-# Hardware
+rm -rf vendor/lineage-priv/keys
+git clone --depth=1 -b alpha https://github.com/MaheshTechnicals/vendor_lineage-priv vendor/lineage-priv/keys
+
 rm -rf hardware/sony/timekeep
 git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_hardware_sony_timekeep.git hardware/sony/timekeep
 
 rm -rf hardware/xiaomi
-git clone --depth=1 -b 15 https://github.com/ihsanulrahman/hardware_xiaomi.git hardware/xiaomi
+git clone --depth=1 -b lineage-22.2 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
 
 echo "✅ All repositories cloned successfully"
 
@@ -84,7 +73,7 @@ echo "Export vars done ✅"
 echo "Envsetup success ✅"
 
 # ===============================
-# Step 7: Setup Lunch target
+# Step 7: Setup GApps build (Lunch target)
 # ===============================
 # Options:
 #   va        → Vanilla (No GApps)
@@ -93,7 +82,7 @@ echo "Envsetup success ✅"
 #
 echo "Setting up lunch target..."
 axion miatoll va
-echo "Lunch target set to: miatoll (Vanilla build) ✅"
+echo "Lunch target set to: miatoll (GMS build) ✅"
 
 # ===============================
 # Step 8: Clean intermediates
